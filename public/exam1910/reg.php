@@ -14,7 +14,7 @@ $pdo= new PDO("mysql:host={$config['host']};dbname={$config['dbname']}",$config[
 $user_name=$_POST['user_name'];
 $user_pwd=$_POST['user_pwd'];
 //echo $user_pwd,$user_name;
-$sql="insert login(user_name,user_pwd) values($user_name,$user_pwd)";
+$sql="insert users(user_name,user_pwd) values($user_name,$user_pwd)";
 $stmt=$pdo->prepare($sql);
 $stmt->bindParam('user_name',$user_name);
 $stmt->bindParam('user_pwd',$user_pwd);

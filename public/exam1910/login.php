@@ -14,7 +14,7 @@ $pdo= new PDO("mysql:host={$config['host']};dbname={$config['dbname']}",$config[
 $user_name=$_POST['user_name'];
 $user_pwd=$_POST['user_pwd'];
 //echo $user_pwd,$user_name;
-$sql="select * from login where user_name='{$user_name}' and user_pwd='{$user_pwd}'";
+$sql="select * from users where user_name='{$user_name}' and user_pwd='{$user_pwd}'";
 $stmt=$pdo->prepare($sql);
 $stmt->bindParam('user_name',$user_name);
 $stmt->bindParam('user_pwd',$user_pwd);
